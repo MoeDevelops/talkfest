@@ -27,7 +27,7 @@ jobs:
         run: bun i
 
       - name: Install Playwright Browsers
-        run: apt update && npx playwright install --with-deps
+        run: npx playwright install --with-deps
 
       - name: Lint source files
         run: bun run lint
