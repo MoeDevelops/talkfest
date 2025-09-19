@@ -1,7 +1,7 @@
 <script lang="ts">
   import { goto } from "$app/navigation"
   import { resolve } from "$app/paths"
-  import { usernamePasswordSchema } from "../schemas"
+  import { usernamePasswordSchema } from "$lib/schemas"
   import { login } from "./data.remote"
 
   let username = $state("")

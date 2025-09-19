@@ -18,7 +18,8 @@ export const usersTable = sqliteTable("users", {
     .primaryKey()
     .$defaultFn(() => v7()),
   username: text().notNull().unique(),
-  displayname: text().notNull()
+  displayname: text().notNull(),
+  avatar: text().notNull()
 })
 
 export const authenticationTable = sqliteTable("authentication", {
@@ -38,4 +39,29 @@ export const sessionsTable = sqliteTable("sessions", {
   userId: uuid()
     .notNull()
     .references(() => usersTable.id)
+})
+
+export const chatsTable = sqliteTable("chats", {
+  id: uuid()
+    .primaryKey()
+    .$defaultFn(() => v7()),
+  user1: uuid()
+    .notNull()
+    .references(() => usersTable.id),
+  user2: uuid()
+    .notNull()
+    .references(() => usersTable.id)
+})
+
+export const chatMessagesTable = sqliteTable("chat_messages", {
+  id: uuid()
+    .primaryKey()
+    .$defaultFn(() => v7()),
+  author: uuid()
+    .notNull()
+    .references(() => usersTable.id),
+  room: uuid()
+    .notNull()
+    .references(() => chatsTable.id),
+  content: text().notNull()
 })

@@ -1,6 +1,6 @@
 import { command, getRequestEvent } from "$app/server"
 import { authenticationTable, db, sessionsTable, usersTable } from "$lib/db"
-import { usernamePasswordSchema } from "../schemas"
+import { usernamePasswordSchema } from "$lib/schemas"
 import { eq } from "drizzle-orm"
 import { v7 } from "uuid"
 
