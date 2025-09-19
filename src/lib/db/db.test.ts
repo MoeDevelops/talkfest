@@ -15,7 +15,8 @@ test("Create and read User", async () => {
   await db.insert(usersTable).values({
     id: id,
     username: testUsername,
-    displayname: testDisplayname
+    displayname: testDisplayname,
+    avatar: "/assets/user.svg"
   })
 
   const users = await db.select().from(usersTable)
@@ -38,7 +39,8 @@ test("Create and read User with Auth", async () => {
   await db.insert(usersTable).values({
     id: id,
     username: testUsername,
-    displayname: testDisplayname
+    displayname: testDisplayname,
+    avatar: "/assets/user.svg"
   })
 
   const pwHash = await Bun.password.hash(testPassword)

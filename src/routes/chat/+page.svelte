@@ -21,7 +21,12 @@
 </script>
 
 <div>
-  {#each chats as chat (chat.id)}
-    <a href={resolve(`/chat/${chat.id}`)}>{chat.otherUserId}</a>
-  {/each}
+  {#if user}
+    <h1>Welcome, {user.displayname}</h1>
+  {/if}
+  <div>
+    {#each chats as chat (chat.id)}
+      <a href={resolve(`/chat/${chat.id}`)}>{chat.otherUserId}</a>
+    {/each}
+  </div>
 </div>
