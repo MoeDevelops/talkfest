@@ -14,7 +14,7 @@
       const result = await login(data.data)
 
       if (result) {
-        goto(resolve("/chat"))
+        await goto(resolve("/chat"))
       }
     } else {
       alert(data.error.message)
