@@ -14,7 +14,7 @@
         "@tailwindcss/vite": "^4.1.13",
         "@trivago/prettier-plugin-sort-imports": "^5.2.2",
         "@types/bun": "^1.2.21",
-        "daisyui": "^5.1.10",
+        "daisyui": "^5.2.3",
         "drizzle-kit": "^0.31.4",
         "drizzle-orm": "^0.44.5",
         "eslint": "^9.37.0",
