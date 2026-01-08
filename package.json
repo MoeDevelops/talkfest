@@ -31,7 +31,7 @@
     "@types/bun": "^1.2.21",
     "daisyui": "^5.2.3",
     "drizzle-kit": "^0.31.4",
-    "drizzle-orm": "^0.44.5",
+    "drizzle-orm": "^0.45.1",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-svelte": "^3.12.3",
