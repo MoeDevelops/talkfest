@@ -21,7 +21,7 @@
   "devDependencies": {
     "@eslint/compat": "^2.0.0",
     "@eslint/js": "^9.39.2",
-    "@libsql/client": "^0.15.15",
+    "@libsql/client": "^0.17.0",
     "@playwright/test": "^1.57.0",
     "@sveltejs/adapter-node": "^5.4.0",
     "@sveltejs/kit": "^2.49.2",
